@@ -1,13 +1,27 @@
 import React from "react";
 import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 
-function DataCard(props) {
+function DataCards(props) {
+    let allData = props.data.data;
+    console.log(allData);
     let data = {
         infected: {
             head: "Infected",
-            data: "DATA",
+            data: allData["confirmed"].value,
             date: "DATE",
             text: "Number Of active COVID cases"
+        },
+        recovered: {
+            head: "Recovered",
+            data: allData["recovered"].value,
+            date: "DATE",
+            text: "Number of people recovered"
+        },
+        deaths: {
+            head: "Deaths",
+            data: allData["deaths"].value,
+            date: "DATE",
+            text: "Number of deaths"
         }
     };
 
@@ -25,4 +39,4 @@ function DataCard(props) {
     )
 }
 
-export default DataCard;
+export default DataCards;

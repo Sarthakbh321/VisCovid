@@ -10,7 +10,8 @@ function App() {
 
 	const getData = async () => {
 		const data = await fetch();
-		console.log(data);
+		await changeData(data);
+		setLoading(false);
 	}
 
 	useEffect(() => {
@@ -19,7 +20,9 @@ function App() {
 
 	return (
 		<div className={styles.container}>
-			<Cards />
+			{isLoading === true ? <h1>Getting Data</h1>:
+				<Cards data={data}/>
+			}
 		</div>
 	);
 }
