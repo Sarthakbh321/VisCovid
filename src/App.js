@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styles from './App.module.css';
-
 import Cards from './components/Cards/Cards';
 import {fetch} from './api/index';
+import {CircularProgress} from "@material-ui/core";
 
 function App() {
 	const [data, changeData] = React.useState("Getting Data");
@@ -20,7 +20,7 @@ function App() {
 
 	return (
 		<div className={styles.container}>
-			{isLoading === true ? <h1>Getting Data</h1>:
+			{isLoading === true ? <CircularProgress />:
 				<Cards data={data}/>
 			}
 		</div>
