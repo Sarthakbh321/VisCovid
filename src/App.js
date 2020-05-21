@@ -19,7 +19,7 @@ function App() {
 
 	return (
 		<div className={styles.container}>
-			<h1>{JSON.stringify(data)}</h1>
+			<Cards />
 		</div>
 	);
 }
