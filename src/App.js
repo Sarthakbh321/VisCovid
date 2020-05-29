@@ -9,9 +9,16 @@ function App() {
 	const [isLoading, setLoading] = React.useState(true);
 
 	const getData = async () => {
-		const data = await fetch();
-		await changeData(data);
-		setLoading(false);
+		try {
+			const data = await fetch();
+			changeData(data);
+			setLoading(false);
+		} catch(error) {
+			console.log(error);
+		}
+	}
+
+	const getDailyData = async () => {
 	}
 
 	useEffect(() => {
