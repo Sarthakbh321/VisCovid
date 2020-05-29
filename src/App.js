@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import styles from './App.module.css';
 import Cards from './components/Cards/Cards';
-import {fetch} from './api/index';
-import {CircularProgress} from "@material-ui/core";
+import { fetch } from './api/index';
+import Chart from './components/Chart/Chart';
+import { CircularProgress } from "@material-ui/core";
 
 function App() {
 	const [data, changeData] = React.useState("Getting Data");
@@ -13,7 +14,7 @@ function App() {
 			const data = await fetch();
 			changeData(data);
 			setLoading(false);
-		} catch(error) {
+		} catch (error) {
 			console.log(error);
 		}
 	}
@@ -26,11 +27,11 @@ function App() {
 	});
 
 	return (
-		<div className={styles.container}>
-			{isLoading === true ? <CircularProgress />:
-				<Cards data={data}/>
-			}
-		</div>
+		isLoading === true ? <CircularProgress /> :
+			<div className={styles.container}>
+				<Cards data={data} />
+				<Chart />
+			</div>
 	);
 }
 
