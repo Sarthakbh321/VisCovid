@@ -20,3 +20,12 @@ export const getDaily = async () => {
         console.log(error);
     }
 }
+
+export const getCountries = async () => {
+    try {
+        const response = await axios.get("https://covid19.mathdro.id/api/countries");
+        return response.data.countries;
+    } catch(error) {
+        console.log(error);
+    }
+}

@@ -9,7 +9,6 @@ function Chart() {
 	const getDailyData = async () => {
 		const data = await getDaily();
 		setDailyData(data.data);
-		console.log(data.data);
 	}
 
 	useEffect(() => {
