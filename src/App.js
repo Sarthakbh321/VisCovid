@@ -12,7 +12,14 @@ function App() {
 	const [isLoading, setLoading] = useState(true);
 
 	const handleCountryChange = async (country) => {
-		console.log(country);
+		try {
+			const data = await fetch(country);
+			setCurrentCountry(country);
+			changeData(data);
+			console.log(data);
+		} catch(error) {
+			console.log(error);
+		}
 	}
 
 	const getData = async () => {
@@ -25,12 +32,9 @@ function App() {
 		}
 	}
 
-	const getDailyData = async () => {
-	}
-
 	useEffect(() => {
 		getData();
-	});
+	}, []);
 
 	return (
 		isLoading === true ? <CircularProgress /> :
