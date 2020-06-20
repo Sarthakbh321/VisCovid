@@ -16,7 +16,6 @@ function App() {
 			const data = await fetch(country);
 			setCurrentCountry(country);
 			changeData(data);
-			console.log(data);
 		} catch(error) {
 			console.log(error);
 		}

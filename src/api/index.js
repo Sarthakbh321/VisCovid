@@ -7,9 +7,13 @@ export const fetch = async (country) => {
         let newUrl = url;
 
         if(country) {
-            newUrl = `${url}/countries/${country}`
+            if(country === "global") {
+                newUrl = url;
+            } else {
+                newUrl = `${url}/countries/${country}`
+            }
         } 
-
+        
         const res = await axios.get(newUrl);
         return res;
         
