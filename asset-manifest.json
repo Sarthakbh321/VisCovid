@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/VisCovid/static/css/main.d9374119.chunk.css",
+    "main.js": "/VisCovid/static/js/main.f2d84a3c.chunk.js",
+    "main.js.map": "/VisCovid/static/js/main.f2d84a3c.chunk.js.map",
+    "runtime-main.js": "/VisCovid/static/js/runtime-main.904f5109.js",
+    "runtime-main.js.map": "/VisCovid/static/js/runtime-main.904f5109.js.map",
+    "static/js/2.7d614872.chunk.js": "/VisCovid/static/js/2.7d614872.chunk.js",
+    "static/js/2.7d614872.chunk.js.map": "/VisCovid/static/js/2.7d614872.chunk.js.map",
+    "index.html": "/VisCovid/index.html",
+    "precache-manifest.c7e8945370f0d4ca3bf049ef8113ac21.js": "/VisCovid/precache-manifest.c7e8945370f0d4ca3bf049ef8113ac21.js",
+    "service-worker.js": "/VisCovid/service-worker.js",
+    "static/css/main.d9374119.chunk.css.map": "/VisCovid/static/css/main.d9374119.chunk.css.map",
+    "static/js/2.7d614872.chunk.js.LICENSE.txt": "/VisCovid/static/js/2.7d614872.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.904f5109.js",
+    "static/js/2.7d614872.chunk.js",
+    "static/css/main.d9374119.chunk.css",
+    "static/js/main.f2d84a3c.chunk.js"
+  ]
+}
